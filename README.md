@@ -161,3 +161,125 @@ Stack recommendation:
   "genres": ["electronic", "jazz"],
   "tags": ["producer", "dj", "composer"]
 }
+```
+
+---
+
+## Registration Flow
+
+### 1. Wallet Connect  
+Artist connects their wallet through the portal.
+
+### 2. Metadata Upload  
+Basic profile is uploaded to IPFS → returns metadata hash.
+
+### 3. Contract Call  
+Artist calls:
+```
+registerArtist(metadataHash)
+```
+
+### 4. Artist ID Issued  
+A unique ID is generated (auto-increment).
+
+### 5. Verification (Optional)  
+Admin or algorithm confirms:
+- Social links  
+- Official channels  
+- Identity consistency  
+
+Artist receives ✔ Verified Badge.
+
+---
+
+## Integration With Other Projects
+
+| Musicoin Project | Usage of Artist ID |
+|------------------|--------------------|
+| **musicoin-player** | Displays profile + homepage/Twitter |
+| **musicoin-sampling-studio** | Sample authorship tracking |
+| **musicoin-ticketing** | Event organizer identity |
+| **instrument-history** | Artist → instrument ownership link |
+| **contract-proof** | Legal contracts tied to correct identity |
+| **analytics-dashboard** | Revenue, plays, growth tracking |
+
+Artist ID acts as the **root identity connector** for the entire ecosystem.
+
+---
+
+## Installation
+
+### Clone
+```bash
+git clone https://github.com/musicoin/musicoin-artist-id.git
+cd musicoin-artist-id
+```
+
+### Smart Contract Setup
+```bash
+cd contracts
+npm install
+```
+
+Deploy (example):
+```bash
+npx hardhat run scripts/deploy.js --network polygon
+```
+
+### Backend API Setup
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## Roadmap
+
+### ✔ Phase 1 – Core Registry
+- Artist ID issuance  
+- Metadata hash storage  
+- Basic portal UI  
+
+### ✔ Phase 2 – Verification & Social Linking
+- Verified badge  
+- Social media validation  
+- Profile image support  
+
+### ✔ Phase 3 – Cross-Ecosystem Integration
+- Player integration  
+- Ticketing integration  
+- Sampling studio authorship linkage  
+
+### ✔ Phase 4 – Analytics + Advanced Metadata
+- Artist growth statistics  
+- Advanced tags (DAW, equipment, style)  
+- Multi-language bios  
+
+---
+
+## Contribution
+
+Contributions are welcome in all areas:
+- Smart contract design  
+- Frontend portal UX  
+- Indexer logic  
+- API extensions  
+- Security and verification improvements  
+
+Please submit issues and pull requests.
+
+---
+
+## License
+
+TBD  
+(MIT or Apache-2.0 recommended)
